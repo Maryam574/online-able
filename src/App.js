@@ -18,9 +18,8 @@ const promise = loadStripe(
   );
 
 function App() {
-  const [ {}, dispatch ] = useStateValue();
-
-  useEffect(() => {
+  // eslint-disable-next-line
+  const [ {}, dispatch ] = useStateValue(); useEffect(() => {
     // will only run once when the app component loads...
 
     auth.onAuthStateChanged((authUser) => {
@@ -41,6 +40,7 @@ function App() {
         });
       }
     });
+ // eslint-disable-next-line 
   }, []);
 
   return (
