@@ -38,7 +38,9 @@ useEffect(() =>{
      getClientSecret();
 }, [basket])
 
+
 console.log('THE SECRET IS >>>', clientSecret)
+console.log('👱', user)
 
 const handleSubmit = async (event) => {
     // fancy stripe stuff...
@@ -103,8 +105,8 @@ const handleChange = event => {
 
                 <div className='payment__address'>
                     <p>{user?.email}</p>
-                    <p>123 React Lane</p>
-                    <p>Los Angeles, CA</p>
+                    <p>123 Satellite Town,</p>
+                    <p>Gujranwala, Pakistan</p>
                 </div>
 
                 </div>
@@ -154,7 +156,7 @@ const handleChange = event => {
                                   value={getBasketTotal(basket)} 
                                  displayType={"text"}
                                  thousandSeparator={true}
-                                 prefix={"$"}
+                                 prefix={"Rs"}
                                  />
                                  <button disabled={processing || disabled || succeeded}>
                                      <span>{processing ? <p>Processing</p> :

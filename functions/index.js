@@ -18,7 +18,7 @@ app.use(express.json());
 app.get('/', (request, response) => response.status(200).send('Hello world'))
 
 
-app.post('/payments/create', async (request, response) =>{
+app.post('/payments/create', async (request, response) => {
     const total = request.query.total;
 
     console.log('Payment Request Recieved BOOM!!! for this amount >>>', total)
@@ -37,6 +37,3 @@ response.status(201).send({
 
 //Listen command
 exports.api = functions.https.onRequest(app)
-
-//Example endpoint
-// http://localhost:5001/online-able-b17bc/us-central1/api
